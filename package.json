@@ -1,0 +1,21 @@
+{
+    "name": "cypress",
+    "version": "1.0.0",
+    "description": "cypress-test",
+    "main": "index.js",
+    "scripts": {
+        "test": "cypress open"
+    },
+    "repository": {
+        "type": "git",
+        "url": "main"
+    },
+    "author": "Tylek Kadyrov",
+    "license": "ISC",
+    "dependencies": {
+        "cypress": "^13.6.2"
+    },
+    "devDependencies": {
+        "typescript": "^5.3.3"
+    }
+}
