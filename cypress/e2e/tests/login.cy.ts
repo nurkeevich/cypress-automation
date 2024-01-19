@@ -12,5 +12,8 @@ describe("login page", () => {
         loginActions.enterUsername("Admin");
         loginActions.enterPassword("admin123");
         loginActions.clickLogin();
+        cy.get(".oxd-topbar-header-breadcrumb > .oxd-text").should(
+            "be.visible"
+        );
     });
 });
