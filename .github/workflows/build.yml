@@ -5,5 +5,7 @@ jobs:
         steps:
             - run: node --version
             - run: npm --version
+            
             - run: npm install
+            working-directory: client
             # - run: npm run test:run
