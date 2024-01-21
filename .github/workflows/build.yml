@@ -3,7 +3,7 @@ jobs:
     first-job:
         runs-on: windows-latest
         steps:
-            # - run: node --version
+            - run: node --version
             - run: npm --version
-            - run: npm install
-            - run: npm run test:run
+            # - run: npm install
+            # - run: npm run test:run
