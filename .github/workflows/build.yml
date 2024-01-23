@@ -1,7 +1,18 @@
-on: push
+name: cypress e2e tests
+
+on:
+    push:
+        branches: [main]
+
 jobs:
-    first-job:
-        runs-on: windows-latest
+    cypress-test:
+        needs: test
+        runs-on: ubuntu-latest
         steps:
-            - run: node --version
-            - run: npm --version
+            - name: run cypress tests in chrome
+              uses: cypress-io/github-action@v5
+              with:
+                  browser: chrome
+                  record: true
+                  build: npm run build
+                  start: npm start
