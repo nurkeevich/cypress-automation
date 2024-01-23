@@ -5,8 +5,7 @@ on:
         branches: [main]
 
 jobs:
-    cypress-test:
-        needs: test
+    first-job:
         runs-on: ubuntu-latest
         steps:
             - name: run cypress tests in chrome
