@@ -14,10 +14,38 @@ jobs:
               uses: cypress-io/github-action@v5
               with:
                   browser: chrome
-                  # record: true
-                  # build: npm run build
                   start: npm run test:run
-                  #   wait-on: 'http://localhost:3000'
-            #   env:
-            #       CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-            #       <Add in all your project specific env vars here>
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Below is the example I copied when building this GitHub Actions yml file
+# https://chloemcateer.medium.com/running-cypress-e2e-tests-in-github-actions-816a47ebc78b
+
+# EXAMPLE YML FILE
+# name: Front-end CI
+
+# on:
+#     push:
+#         branches: [main]
+#     pull_request:
+#         branches: [main]
+
+# jobs:
+#     cypress-test:
+#         needs: test
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: Check out repository code
+#               uses: actions/checkout@v3
+#             - run: npm i
+
+#             - name: run cypress tests in chrome
+#               uses: cypress-io/github-action@v5
+#               timeout-minutes: 10
+#               with:
+#                   browser: chrome
+#                   record: true
+#                   build: npm run build
+#                   start: npm start
+#                   wait-on: 'http://localhost:3000'
+#               env:
+#                   CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+#                   <Add in all your project specific env vars here>
