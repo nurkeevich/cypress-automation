@@ -1,7 +1,25 @@
-on: push
+# on: push
+# jobs:
+#     first-job:
+#         runs-on: windows-latest
+#         steps:
+#             - run: node --version
+#             - run: npm --version
+
+name: Cypress Tests
+
+on: [push]
+
 jobs:
-    first-job:
-        runs-on: windows-latest
+    cypress-run:
+        runs-on: ubuntu-latest
         steps:
-            - run: node --version
-            - run: npm --version
+            - name: Checkout
+              uses: actions/checkout@v2
+            # Install NPM dependencies, cache them correctly
+            # and run all Cypress tests
+            - name: Cypress run
+              uses: cypress-io/github-action@v2
+            #   with:
+            #   build: npm run build
+            #   start: npm start
