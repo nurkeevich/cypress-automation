@@ -4,12 +4,14 @@ const loginActions = new loginPageActions();
 
 describe("login page", () => {
     it("should visit login page", () => {
-        cy.visit(
-            "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
-        );
+        // cy.visit(
+        //     "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+        // );
+        cy.visit("/login");
 
         loginActions.enterUsername("Admin");
         loginActions.enterPassword("admin123");
         loginActions.clickLogin();
+        cy.get(".oxd-topbar-header").should("be.visible");
     });
 });

@@ -11,5 +11,7 @@ export default defineConfig({
             "cypress/e2e/2-advanced-examples",
             "cypress/e2e/1-getting-started",
         ],
+        // baseURL
+        baseUrl: "https://opensource-demo.orangehrmlive.com/web/index.php/auth",
     },
 });
