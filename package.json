@@ -20,5 +20,8 @@
     "devDependencies": {
         "prettier": "3.2.4",
         "typescript": "^5.3.3"
+    },
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": true
     }
 }
