@@ -4,9 +4,6 @@ const loginActions = new loginPageActions();
 
 describe("login page", () => {
     it("should visit login page", () => {
-        // cy.visit(
-        //     "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
-        // );
         cy.visit("/login");
 
         loginActions.enterUsername("Admin");
